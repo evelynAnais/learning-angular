@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./success-alert.component.css']
 })
 export class SuccessAlertComponent implements OnInit {
+  username = '';
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onUpdateUsername(event: Event) {
+    this.username = (<HTMLInputElement>event.target).value;
+  }
+
+  clearUsername() {
+    this.username = '';
+  }
 }
