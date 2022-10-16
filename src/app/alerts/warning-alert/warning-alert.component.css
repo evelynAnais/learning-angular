@@ -1,4 +1,8 @@
-p {
+p.warn {
   border: 5px solid plum;
   box-shadow: 1rem 1rem 5rem 2rem plum;
+}
+
+.blue {
+  background-color: aqua;
 }

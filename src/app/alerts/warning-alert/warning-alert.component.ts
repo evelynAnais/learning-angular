@@ -6,6 +6,26 @@ import { Component } from "@angular/core";
   styleUrls: ['./warning-alert.component.css']
 })
 export class WarningAlertComponent {
+  display = false;
+  timesClicked = [];
+  number = 0;
+
+  displayParagraph() {
+    this.display = !this.display;
+    this.timesClicked.push(this.timeClick());
+    console.log(this.timesClicked);
+  }
+
+  timeClick() {
+    const result = {
+      index: this.number,
+      time: new Date()
+    }
+    this.number++;
+    return result;
+  }
+
 
 }
+
 

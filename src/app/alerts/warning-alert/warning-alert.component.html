@@ -1,1 +1,8 @@
-<p>Warning</p>
+<p class="warn">Warning</p>
+<button class="btn btn-primary" (click)="displayParagraph()">Display Details</button>
+<p *ngIf="display">Password = butterfly</p>
+<p
+  [ngClass]="{blue: num.index >= 5}"
+  *ngFor="let num of timesClicked">
+  {{ num.time }}
+</p>
